@@ -1,0 +1,116 @@
+
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Paperlogy-8ExtraBold';
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+.bga {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    opacity: 1;
+    z-index: -99;
+    isolation: isolate;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    margin-top: 1.75rem;
+    max-width: 960px;
+}
+
+.scrolled {
+    position: sticky;
+    top: 0;
+    padding: 0.75rem 2.25rem;
+    z-index: 99;
+    background: rgba(255, 250, 250, 0.95);
+    border-radius: 6px;
+    box-shadow: 0px 1px 8px #5C5C5C;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    margin: auto;
+}
+
+.thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.broad a img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 3.75rem;
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.25rem;
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
+
+p {
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
