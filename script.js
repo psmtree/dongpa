@@ -14,7 +14,8 @@ async function loadBroadNo(id) {
   console.log(id);
   const broad = document.getElementById(id);
 
-  const broadUrl = 'https://play.sooplive.co.kr';
+  // 기존의 로컬 서버 주소를 Cloudflare Worker의 URL로 변경
+  const broadUrl = 'https://dongpa-proxy.psmtree.workers.dev';  // Cloudflare Worker의 URL
   const path = '/' + id; // 경로 앞에 '/' 추가
 
   let result = { thumbnail: '', title: '', nickname: '' };
@@ -43,7 +44,7 @@ async function loadBroadNo(id) {
   const link = broad.querySelector(".thumb-box > a");
   link.href = 'https://play.sooplive.co.kr/' + id;
   // 방송 썸네일
-  const img = broad.querySelector('.thumb-box > a > img');
+  const img = broad.querySelector('.thumb-box > a > .refresh');
   img.src = result.thumbnail;
 
   //프로필 방송국 링크
@@ -72,7 +73,51 @@ function refreshImages() {
     img.src = url.toString();
   });
 }
-setInterval(refreshImages, 5000); // 5초마다 새로고침
+
+// 5초마다 이미지 새로고침
+setInterval(refreshImages, 5000);
+
+// 페이지를 닫기 전 스크롤 위치 저장
+window.addEventListener("beforeunload", () => {
+  sessionStorage.setItem("scrollPosition", window.scrollY);
+});
+
+// 페이지 로드 시 스크롤 위치 복원
+window.addEventListener("load", () => {
+  const scrollPosition = sessionStorage.getItem("scrollPosition");
+  if (scrollPosition !== null) {
+    window.scrollTo(0, Number(scrollPosition));
+  }
+});
+
+// 2분마다 페이지 새로고침
+setInterval(() => {
+  location.reload();
+}, 180000);
+
+// 페이지 상단으로 이동
+document.querySelector('.gotop').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 일정 열기 /
+document.querySelector('.bttn-plan').addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.querySelector(".hideplan").style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // body의 스크롤 비활성화
+});
+
+// 일정 닫기 /
+document.addEventListener("click", (e) => {
+  const plan = document.querySelector(".hideplan");
+  if (document.querySelector(".hideplan").style.display === 'flex') {
+    const openplan = plan.querySelector('.plan');
+    if (!openplan.contains(e.target)) {
+      document.querySelector(".hideplan").style.display = 'none';
+      document.body.style.overflow = 'auto'; // body의 스크롤 복원
+    }
+  }
+});
 
 // 크레딧 열기 /
 document.querySelector('.bttn-say').addEventListener('click', (e) => {
@@ -81,7 +126,7 @@ document.querySelector('.bttn-say').addEventListener('click', (e) => {
   document.body.style.overflow = 'hidden'; // body의 스크롤 비활성화
 });
 
-// 패치노트 내용 불러오기
+// 크레딧 내용 불러오기
 fetch('sources.txt')
   .then(response => response.text())
   .then(data => {
@@ -90,12 +135,14 @@ fetch('sources.txt')
   .catch(error => console.log('Error:', error));
 
 
-// 패치노트 닫기 /
+// 크레딧 닫기 /
 document.addEventListener("click", (e) => {
   const credit = document.querySelector(".hidecredit");
   if (document.querySelector(".hidecredit").style.display === 'flex') {
     const opencredit = credit.querySelector('.credit');
     if (!opencredit.contains(e.target)) {
-    document.querySelector(".hidecredit").style.display = 'none';
-    document.body.style.overflow = 'auto'; // body의 스크롤 복원
-}}});
+      document.querySelector(".hidecredit").style.display = 'none';
+      document.body.style.overflow = 'auto'; // body의 스크롤 복원
+    }
+  }
+});
