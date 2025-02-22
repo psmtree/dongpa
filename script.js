@@ -14,7 +14,7 @@ async function loadBroadNo(id) {
   console.log(id);
   const broad = document.getElementById(id);
 
-  const broadUrl = 'http://localhost:3000/api/';
+  const broadUrl = 'https://play.sooplive.co.kr';
   const path = '/' + id; // 경로 앞에 '/' 추가
 
   let result = { thumbnail: '', title: '', nickname: '' };
