@@ -1,7 +1,14 @@
-동파 관전실 favicon 원본 : https://cafe.naver.com/steamindiegame/19239135
-배경 영상 원본 : https://www.youtube.com/watch?v=H56YRnGO5a4
-일정표 원본 : https://cafe.naver.com/steamindiegame/19384003
-
-유기농 로고 : https://cafe.naver.com/steamindiegame/19384575
-레드힐즈 로고 : https://ch.sooplive.co.kr/calinya/post/151886169https://ch.sooplive.co.kr/calinya/post/151886169
-달아이스 로고, 다이스키 로고, 죠뗌므 로고 : https://docs.google.com/spreadsheets/d/1hYEKARZKmtirlgGw21cTYdOb__UJ2nVB1kG2mqvqSVk/edit?gid=2137625434#gid=2137625434
+SOOP에서 진행 중인 컨텐츠를 더 재밌게 즐기기 위한 목적으로 제작했습니다.
+<br>오류 및 버그가 발생할 수 있습니다.
+<br>버그 수정 및 업데이트가 즉각적이지 않을 확률이 높습니다.
+<br>코드 및 제작에 사용한 파일의 출처는 아래와 같습니다.
+<br>
+<br>코드 : https://github.com/psmtree/dongpa
+<br>릴파 프로필 : https://ch.sooplive.co.kr/lilpa0309
+<br>동파 관전실 favicon 원본 : https://cafe.naver.com/steamindiegame/19239135
+<br>배경 영상 원본 : https://www.youtube.com/watch?v=H56YRnGO5a4
+<br>일정표 원본 : https://cafe.naver.com/steamindiegame/19384003
+<br>
+<br>유기농 로고 : https://cafe.naver.com/steamindiegame/19384575
+<br>레드힐즈 로고 : https://ch.sooplive.co.kr/calinya/post/151886169https://ch.sooplive.co.kr/calinya/post/151886169
+<br>달아이스 로고, 다이스키 로고, 죠뗌므 로고 : https://docs.google.com/spreadsheets/d/1hYEKARZKmtirlgGw21cTYdOb__UJ2nVB1kG2mqvqSVk/edit?gid=2137625434#gid=2137625434
