@@ -126,6 +126,18 @@ header img {
     border-radius: 16px;
 }
 
+.thumb-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+}
+.refresh {
+    width: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+}
 .coach {
     display: flex;
     flex-direction: column;
@@ -136,19 +148,7 @@ header img {
     width: 480px;
 }
 
-.thumb-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 360px;
-}
 
-img {
-    width: 360px;
-    object-fit: cover;
-    border-radius: 16px;
-}
 
 .details {
     display: flex;
@@ -168,7 +168,7 @@ img {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    border: #1B1B1B 0.5px solid;
+    border: #999999 0.5px solid;
     border-radius: 24px;
 }
 
@@ -189,7 +189,18 @@ img {
     margin: 0;
 }
 
-.title {
+.coach * .title {
+    width: 416px;
+    text-align: left;
+    white-space: nowrap;
+    /* 텍스트 줄바꿈 방지 */
+    overflow: hidden;
+    /* 넘치는 부분 숨기기 */
+    text-overflow: ellipsis;
+    /* 넘치는 부분에 '...' 표시 */
+}
+
+.players * .title {
     width: 296px;
     text-align: left;
     white-space: nowrap;
@@ -221,9 +232,10 @@ a:visited {
 .medal {
     position: absolute;
     top: 0;
-    width: 36px;
-    height: 36px;
-    background-color: #3857a5;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    /* background-color: #1a284c; */
 }
 
 h1 {

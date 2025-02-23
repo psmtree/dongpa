@@ -8,6 +8,7 @@ const elements = document.querySelectorAll('.broad');
 elements.forEach(element => {
   user_id.push(element.id);
 });
+
 console.log(user_id); // ['ecvhao', 'cotton1217', 'danchu17', 'kjhh0029']
 
 async function loadBroadNo(id) {
@@ -66,6 +67,25 @@ user_id.forEach(id => {
   loadBroadNo(id);
 });
 
+// 금메달 이미지 추가
+document.querySelectorAll("#gold").forEach(el => {
+  // el.src = "https://raw.githubusercontent.com/twitter/twemoji/refs/heads/master/assets/svg/1f947.svg";
+  el.src = "media/gold.png";
+});
+
+// 은메달 이미지 추가
+document.querySelectorAll("#silver").forEach(el => {
+  el.src = "https://raw.githubusercontent.com/twitter/twemoji/refs/heads/master/assets/svg/1f948.svg";
+  el.src = "media/silver.png";
+});
+
+// 동메달 이미지 추가
+document.querySelectorAll("#bronze").forEach(el => {
+  el.src = "https://raw.githubusercontent.com/twitter/twemoji/refs/heads/master/assets/svg/1f949.svg";
+  el.src = "media/bronze.png";
+});
+
+// 이미지 새로고침
 function refreshImages() {
   document.querySelectorAll('.refresh').forEach(img => {
     const url = new URL(img.src);
@@ -73,7 +93,6 @@ function refreshImages() {
     img.src = url.toString();
   });
 }
-
 // 5초마다 이미지 새로고침
 setInterval(refreshImages, 5000);
 
@@ -90,10 +109,10 @@ window.addEventListener("load", () => {
   }
 });
 
-// 2분마다 페이지 새로고침
-setInterval(() => {
-  location.reload();
-}, 180000);
+// 5분마다 페이지 새로고침
+// setInterval(() => {
+//   location.reload();
+// }, 300000);
 
 // 페이지 상단으로 이동
 document.querySelector('.gotop').addEventListener('click', () => {

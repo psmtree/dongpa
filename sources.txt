@@ -12,5 +12,5 @@ SOOP에서 진행 중인 컨텐츠를 더 재밌게 즐기기 위한 목적으�
 <br>
 <br>유기농 로고 : https://cafe.naver.com/steamindiegame/19384575
 <br>레드힐즈 로고 : https://ch.sooplive.co.kr/calinya/post/151886169https://ch.sooplive.co.kr/calinya/post/151886169
-<br>달아이스 로고, 다이스키 로고, 죠뗌므 로고 : https://docs.google.com/spreadsheets/d/1hYEKARZKmtirlgGw21cTYdOb__UJ2nVB1kG2mqvqSVk/edit?gid=2137625434#gid=2137625434
-<br>화살표, 메달 이미지 : https://github.com/twitter/twemoji
+<br>달아이스 로고, 다이스키 로고, 죠뗌므 로고, 메달 이미지 : https://cafe.naver.com/steamindiegame/19333496
+<br>화살표 이미지 : https://github.com/twitter/twemoji
