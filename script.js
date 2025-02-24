@@ -12,7 +12,6 @@ elements.forEach(element => {
 console.log(user_id); // ['ecvhao', 'cotton1217', 'danchu17', 'kjhh0029']
 
 async function loadBroadNo(id) {
-  console.log(id);
   const broad = document.getElementById(id);
 
   // 기존의 로컬 서버 주소를 Cloudflare Worker의 URL로 변경
@@ -69,20 +68,17 @@ user_id.forEach(id => {
 
 // 금메달 이미지 추가
 document.querySelectorAll("#gold").forEach(el => {
-  // el.src = "https://raw.githubusercontent.com/twitter/twemoji/refs/heads/master/assets/svg/1f947.svg";
-  el.src = "media/gold.png";
+  el.src = "https://raw.githubusercontent.com/psmtree/dongpa/main/media/gold.png";
 });
 
 // 은메달 이미지 추가
 document.querySelectorAll("#silver").forEach(el => {
-  el.src = "https://raw.githubusercontent.com/twitter/twemoji/refs/heads/master/assets/svg/1f948.svg";
-  el.src = "media/silver.png";
+  el.src = "https://raw.githubusercontent.com/psmtree/dongpa/main/media/silver.png";
 });
 
 // 동메달 이미지 추가
 document.querySelectorAll("#bronze").forEach(el => {
-  el.src = "https://raw.githubusercontent.com/twitter/twemoji/refs/heads/master/assets/svg/1f949.svg";
-  el.src = "media/bronze.png";
+  el.src = "https://raw.githubusercontent.com/psmtree/dongpa/main/media/bronze.png";
 });
 
 // 이미지 새로고침
@@ -117,6 +113,25 @@ window.addEventListener("load", () => {
 // 페이지 상단으로 이동
 document.querySelector('.gotop').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 오류 안내 열기 /
+document.querySelector('.bttn-error').addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.querySelector(".hideerror").style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // body의 스크롤 비활성화
+});
+
+// 오류 안내 /
+document.addEventListener("click", (e) => {
+  const error = document.querySelector(".hideerror");
+  if (document.querySelector(".hideerror").style.display === 'flex') {
+    const openerror = error.querySelector('.error');
+    if (!openerror.contains(e.target)) {
+      document.querySelector(".hideerror").style.display = 'none';
+      document.body.style.overflow = 'auto'; // body의 스크롤 복원
+    }
+  }
 });
 
 // 일정 열기 /

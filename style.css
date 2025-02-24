@@ -127,12 +127,15 @@ header img {
 }
 
 .thumb-box {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 360px;
+    height: 202.5px;
 }
+
 .refresh {
     width: 360px;
     object-fit: cover;
@@ -148,7 +151,10 @@ header img {
     width: 480px;
 }
 
-
+.coach .thumb-box {
+    width: 480px;
+    height: 270px;
+}
 
 .details {
     display: flex;
@@ -225,10 +231,6 @@ a:visited {
     /* 클릭한 후 색상도 부모 색상으로 상속 */
 }
 
-.thumb-box {
-    position: relative
-}
-
 .medal {
     position: absolute;
     top: 0;
@@ -278,6 +280,14 @@ h5 {
     text-align: center;
 }
 
+h6 {
+    font-size: 1rem;
+    color: #1B1B1B;
+    font-weight: normal;
+    margin: 0%;
+    text-align: center;
+}
+
 p {
     color: #1B1B1B;
     font-weight: normal;
@@ -285,7 +295,7 @@ p {
     text-align: center;
 }
 
-.bttn-say, .bttn-plan {
+.bttn-say, .bttn-plan, .bttn-error {
     height: 3rem;
     border: 1px solid #1B1B1B;
     border-radius: 4px;
@@ -294,17 +304,17 @@ p {
     padding: 0 2.25rem;
 }
 
-.bttn-say h5, .bttn-plan h5 {
+.bttn-say h5, .bttn-plan h5, .bttn-error h5 {
     font-family: 'paperlogy8';
     color: #1B1B1B;
 }
 
-.bttn-say:hover, .bttn-plan:hover {
+.bttn-say:hover, .bttn-plan:hover, .bttn-error:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 4px 1px hsla(0, 0%, 40%, 0.5);
 }
 
-.bttn-say:active, .bttn-plan:active {
+.bttn-say:active, .bttn-plan:active, .bttn-error:active {
     transform: scale(1);
 }
 
@@ -315,6 +325,35 @@ p {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+}
+
+.hideerror {
+    display: none;
+    background: hsla(0, 0%, 10%, 0.50);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: scale(0.5);
+    padding: 1.25rem;
+    background-color: aliceblue;
+    border: 4px solid #3857a5;
+    border-radius: 16px;
+    box-shadow: 0px 0px 16px 8px hsla(0, 0%, 20%, 0.5);
 }
 
 .hideplan {
@@ -365,7 +404,7 @@ p {
     box-shadow: 0px 0px 16px 8px hsla(0, 0%, 20%, 0.5);
 }
 
-footer h5 {
+footer h6 {
     font-family: 'paperlogy6';
     color: aliceblue;
     padding-bottom: 0.5rem;
