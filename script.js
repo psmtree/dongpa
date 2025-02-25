@@ -81,6 +81,11 @@ document.querySelectorAll("#bronze").forEach(el => {
   el.src = "https://raw.githubusercontent.com/psmtree/dongpa/main/media/bronze.png";
 });
 
+// 청메달 이미지 추가
+document.querySelectorAll("#blue").forEach(el => {
+  el.src = "https://raw.githubusercontent.com/psmtree/dongpa/main/media/blue.png";
+});
+
 // 이미지 새로고침
 function refreshImages() {
   document.querySelectorAll('.refresh').forEach(img => {

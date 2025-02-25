@@ -90,6 +90,7 @@ header img {
 }
 
 .logo {
+    position: relative;
     width: 192px;
     height: 192px;
     object-fit: cover;
@@ -121,7 +122,43 @@ header img {
     justify-content: center;
     align-items: center;
     width: 360px;
-    background-color: rgba(240, 248, 255, 0.8);
+    background-color: hsla(0, 0%, 50%, 0.8);
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.broad1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    background-color: #fff674cc;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.broad2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    background-color: #eaffffcc;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.broad3 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    background-color: #fab350cc;
     padding: 8px;
     border-radius: 16px;
 }
